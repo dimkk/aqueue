@@ -7,7 +7,7 @@
   },
   "scripts": {
     "test": "gulp test",
-    "start": "node server"
+    "start": "gulp build && node server"
   },
   "devDependencies": {
     "awesome-typescript-loader": "~0.14.0",
