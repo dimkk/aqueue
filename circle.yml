@@ -1,7 +1,7 @@
 dependencies:
   override:
     - npm install -g bower tsd
-    - npm install --dev
+    - npm install
     - bower install
     - gulp build
     - npm start
