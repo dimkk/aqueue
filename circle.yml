@@ -4,3 +4,4 @@ dependencies:
     - npm install --dev
     - bower install
     - gulp build
+    - npm start
