@@ -61,15 +61,23 @@ module.exports = function(config) {
       'karma-phantomjs-launcher',
       'karma-coverage',
       'karma-jasmine',
-      'karma-ng-html2js-preprocessor'
+      'karma-ng-html2js-preprocessor',
+      'karma-spec-reporter'
     ],
+    specReporter: {
+        maxLogLines: 5,         // limit number of lines logged per test
+        suppressErrorSummary: true,  // do not print error summary
+        suppressFailed: false,  // do not print information about failed tests
+        suppressPassed: false,  // do not print information about passed tests
+        suppressSkipped: true  // do not print information about skipped tests
+      },
 
     coverageReporter: {
       type : 'html',
       dir : 'coverage/'
     },
 
-    reporters: ['progress'],
+    reporters: ['spec'],
 
     proxies: {
       '/assets/': path.join('/base/', conf.paths.src, '/assets/')
